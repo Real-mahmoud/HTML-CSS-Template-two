@@ -6,7 +6,7 @@ let landing=document.querySelector(".landing")
 let changeBgLeft=document.querySelector(".change-background-l")
 let changeBgRight=document.querySelector(".change-background-r")
 let bulletsLis=document.querySelectorAll(".bullets li")
-
+let toTopBtn=document.querySelector(".scroll-to-top")
 let i=1
 
 // when hover over other links it delete the active class from first link (a)
@@ -44,3 +44,16 @@ changeBgLeft.addEventListener("click",()=>{
     bulletsLis[i].classList.add("active");
 })
 
+window.addEventListener("scroll",()=>{
+    if (window.scrollY>200) {
+        toTopBtn.style.display="block"
+        
+    }else {
+        toTopBtn.style.display="none"
+ 
+    }
+})
+
+toTopBtn.addEventListener("click",()=>{
+    window.scrollTo(0,0)
+})
