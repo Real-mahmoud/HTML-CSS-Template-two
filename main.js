@@ -7,6 +7,14 @@ let changeBgLeft=document.querySelector(".change-background-l")
 let changeBgRight=document.querySelector(".change-background-r")
 let bulletsLis=document.querySelectorAll(".bullets li")
 let toTopBtn=document.querySelector(".scroll-to-top")
+let toDoBtn=document.querySelector(".to-do")
+let portfolioShuffle=document.querySelectorAll(".portfolio .shuffle li")
+let portfolioBoxes=document.querySelectorAll(".portfolio .box")
+console.log(portfolioShuffle);
+
+console.log(portfolioBoxes);
+
+
 let i=1
 
 // when hover over other links it delete the active class from first link (a)
@@ -57,3 +65,31 @@ window.addEventListener("scroll",()=>{
 toTopBtn.addEventListener("click",()=>{
     window.scrollTo(0,0)
 })
+
+// sort portfolio 
+
+
+for (let i = 0; i < portfolioShuffle.length; i++) {
+    portfolioShuffle[i].addEventListener("click",()=>{
+        for (let j = 0; j < portfolioShuffle.length; j++) {
+            portfolioShuffle[j].classList.remove("active")
+        }
+        portfolioShuffle[i].classList.add("active")
+        let att=portfolioShuffle[i].value
+        console.log(att);
+        
+        if (portfolioShuffle[i].getAttribute("value")==="all") {
+            portfolioBoxes.forEach(box=>box.style.display="block")
+        }else {
+            portfolioBoxes.forEach(box=>{
+                if (box.classList.contains(portfolioShuffle[i].getAttribute("value"))) {
+                    box.style.display="block"
+                }else{
+                    box.style.display="none"
+                }    
+            })
+        }
+    })
+    
+}
+

@@ -414,12 +414,17 @@ nav .form::before {
 .portfolio {
     padding: var(--section-padding) 0;
 }
+.portfolio .main-heading p {
+    max-width: 90%;
+}
 .portfolio .shuffle {
     display: flex;
     justify-content: center;
 }
 .portfolio .shuffle li {
+    cursor: pointer;
     padding: 10px;
+    transition: .3s;
 }
 .portfolio .shuffle li.active {
     color: white;
@@ -460,6 +465,19 @@ nav .form::before {
     font-weight: 400;
     color: var(--main-color);
 }
+.portfolio .img-container .box .caption a {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
 .portfolio .more {
     display: block;
     width: fit-content;
@@ -525,6 +543,9 @@ nav .form::before {
     text-align: center;
     max-height: 80vh;
     overflow: hidden;
+}
+.about  p {
+    min-width: 90%;
 }
 .about .image {
     width: 100%;
