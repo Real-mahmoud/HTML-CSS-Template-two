@@ -907,6 +907,7 @@ nav .form::before {
     margin-left: -5px;
     border-left: 0;
     cursor: pointer;
+    width: 160px;
 }
 .subscribe .container  p {
     color: white;
@@ -921,6 +922,15 @@ nav .form::before {
         flex-direction: column;
         gap: 50px;
         align-items: center;
+    }
+    .subscribe .container form {
+        width: 100%;
+    }
+    .subscribe .container form input[type="email"] {
+        width: 70%;
+    }
+    .subscribe .container form input[type="submit"] {
+        width: 30%;
     }
 }
 
