@@ -927,12 +927,9 @@ nav .form::before {
         width: 100%;
     }
     .subscribe .container form input[type="email"] {
-        width: 70%;
+        width: 55%;
     }
-    .subscribe .container form input[type="submit"] {
-        width: 30%;
-    }
-}
+    
 
 /* end subscribe */
 
